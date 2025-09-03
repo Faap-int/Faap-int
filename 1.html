@@ -1,0 +1,1261 @@
+<!doctype html>
+<html lang="fr" class="theme-light">
+<head>
+    <title>Fédération Africaine sur l'Art Photographique (FAAP)</title>
+    <meta name="description" content="Des Artistes Photographes au service de l'Afrique et de sa culture">
+    <meta name="author" content="Fédération Africaine sur l'Art Photographique">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    <!-- Style CSS personnalisé pour FAAP -->
+    <style>
+        :root {
+            --faap-primary: #1a365d;
+            --faap-secondary: #e9b949;
+            --faap-accent: #2b6cb0;
+            --faap-dark: #2d3748;
+            --faap-light: #f8fafc;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+        
+        .bg-faap-primary {
+            background-color: var(--faap-primary);
+        }
+        
+        .bg-faap-secondary {
+            background-color: var(--faap-secondary);
+        }
+        
+        .text-faap-primary {
+            color: var(--faap-primary);
+        }
+        
+        .text-faap-secondary {
+            color: var(--faap-secondary);
+        }
+        
+        .btn-faap-primary {
+            background-color: var(--faap-primary);
+            color: white;
+            border: none;
+        }
+        
+        .btn-faap-primary:hover {
+            background-color: #2c5282;
+            color: white;
+        }
+        
+        .btn-faap-secondary {
+            background-color: var(--faap-secondary);
+            color: var(--faap-dark);
+            border: none;
+        }
+        
+        .btn-faap-secondary:hover {
+            background-color: #d69e2e;
+            color: var(--faap-dark);
+        }
+        
+        .navbar-brand img {
+            max-height: 60px;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .gallery-item {
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        
+        .gallery-item img {
+            transition: transform 0.3s ease;
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--faap-secondary);
+        }
+        
+        .section-title.center:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .member-card {
+            border: none;
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+        }
+        
+        .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .member-img {
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .event-card {
+            border: none;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .event-date {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--faap-primary);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        
+        .event-day {
+            font-size: 24px;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .event-month {
+            font-size: 14px;
+            display: block;
+        }
+        
+        footer {
+            background-color: var(--faap-dark);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: background 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background: var(--faap-secondary);
+            color: var(--faap-dark);
+        }
+        
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+        
+        .logo-color-line {
+            height: 5px;
+            display: flex;
+        }
+        
+        .logo-color-line div {
+            flex: 1;
+        }
+        
+        .logo-color-line div:nth-child(1) {
+            background: var(--faap-primary);
+        }
+        
+        .logo-color-line div:nth-child(2) {
+            background: var(--faap-secondary);
+        }
+        
+        .logo-color-line div:nth-child(3) {
+            background: var(--faap-accent);
+        }
+        
+        .country-flag {
+            width: 40px;
+            height: 30px;
+            object-fit: cover;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+        }
+        
+        .membership-form {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        
+        .page-section {
+            padding: 80px 0;
+            display: none;
+        }
+        
+        .page-section.active {
+            display: block;
+        }
+        
+        #home-page {
+            display: block;
+        }
+        
+        .member-filter {
+            margin-bottom: 20px;
+        }
+        
+        .event-detail-image {
+            height: 400px;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Start Preloader -->
+    <div class="preloader">
+        <div class="spinner-border text-faap-primary" role="status">
+            <span class="visually-hidden">Chargement...</span>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+    <!-- Start Top Header Area -->
+    <div class="top-header-area bg-faap-primary py-2">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="welcome-text text-white">
+                        <i class="fas fa-camera me-2"></i>Fédération Africaine sur l'Art Photographique
+                    </div>
+                </div>
+                <div class="col-md-6 text-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-youtube"></i></a></li>
+                        <li class="list-inline-item ms-3">
+                            <select class="form-select form-select-sm bg-transparent text-white border-light">
+                                <option>Français</option>
+                                <option>English</option>
+                                <option>Português</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Top Header Area -->
+
+    <!-- Logo Color Line -->
+    <div class="logo-color-line">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <!-- End Logo Line -->
+
+    <!-- Navbar Area -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#" onclick="showPage('home-page')">
+                <img src="https://via.placeholder.com/200x60/1a365d/ffffff?text=FAAP" alt="FAAP Logo" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#" onclick="showPage('home-page'); return false;">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('about-page'); return false;">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('gallery-page'); return false;">Galerie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('events-page'); return false;">Événements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('members-page'); return false;">Membres</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('countries-page'); return false;">Pays membres</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('contact-page'); return false;">Contact</a></li>
+                    <li class="nav-item ms-2">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Recherche...">
+                            <button class="btn btn-faap-primary" type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar Area -->
+
+    <!-- Home Page -->
+    <div id="home-page" class="page-section active">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h1 class="display-4 fw-bold mb-4 animate__animated animate__fadeInDown">Fédération Africaine sur l'Art Photographique</h1>
+                        <p class="lead mb-4 animate__animated animate__fadeInUp">Promouvant l'excellence photographique à travers l'Afrique et au-delà</p>
+                        <a href="#" class="btn btn-faap-secondary btn-lg me-2 animate__animated animate__fadeInUp" onclick="showPage('gallery-page'); return false;">Découvrir</a>
+                        <a href="#" class="btn btn-outline-light btn-lg animate__animated animate__fadeInUp" onclick="showPage('membership-page'); return false;">Devenir Membre</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Hero Section -->
+
+        <!-- About Section -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2 class="section-title">À propos de la FAAP</h2>
+                        <p class="lead">La Fédération Africaine sur l'Art Photographique (FAAP) est une organisation panafricaine dédiée à la promotion et au développement de l'art photographique sur le continent.</p>
+                        <p>Nous œuvrons à créer des ponts entre les photographes africains, à organiser des expositions, à offrir des formations et à défendre les intérêts des artistes photographes à travers l'Afrique.</p>
+                        <a href="#" class="btn btn-faap-primary" onclick="showPage('about-page'); return false;">En savoir plus</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="About FAAP" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About Section -->
+
+        <!-- Featured Gallery Section -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Galerie en Vedette</h2>
+                <div class="row">
+                    <div class="col-md-4 gallery-item">
+                        <a href="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" data-lightbox="gallery" data-title="Photo 1">
+                            <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Gallery Image" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-md-4 gallery-item">
+                        <a href="https://images.unsplash.com/photo-1507692242724-2013f5d8f091?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" data-lightbox="gallery" data-title="Photo 2">
+                            <img src="https://images.unsplash.com/photo-1507692242724-2013f5d8f091?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Gallery Image" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-md-4 gallery-item">
+                        <a href="https://images.unsplash.com/photo-1551632812-43ca1385a2a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" data-lightbox="gallery" data-title="Photo 3">
+                            <img src="https://images.unsplash.com/photo-1551632812-43ca1385a2a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Gallery Image" class="img-fluid">
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="#" class="btn btn-faap-primary" onclick="showPage('gallery-page'); return false;">Voir toute la galerie</a>
+                </div>
+            </div>
+        </section>
+        <!-- End Featured Gallery Section -->
+
+        <!-- Events Section -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Événements à venir</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card event-card h-100">
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Event">
+                                <div class="event-date">
+                                    <span class="event-day">15</span>
+                                    <span class="event-month">Oct</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Exposition "Regards Africains"</h5>
+                                <p class="card-text">Une exposition collective mettant en lumière le travail de 20 photographes africains contemporains.</p>
+                                <a href="#" class="btn btn-sm btn-faap-primary" onclick="showEventDetail(1); return false;">Plus d'infos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card event-card h-100">
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Event">
+                                <div class="event-date">
+                                    <span class="event-day">22</span>
+                                    <span class="event-month">Oct</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Atelier de photographie de portrait</h5>
+                                <p class="card-text">Masterclass avec le célèbre photographe sénégalais Amadou Diallo sur les techniques de portrait.</p>
+                                <a href="#" class="btn btn-sm btn-faap-primary" onclick="showEventDetail(2); return false;">Plus d'infos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card event-card h-100">
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Event">
+                                <div class="event-date">
+                                    <span class="event-day">05</span>
+                                    <span class="event-month">Nov</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Conférence sur la photographie documentaire</h5>
+                                <p class="card-text">Échanges avec des photojournalistes renommés sur les défis de la photographie documentaire en Afrique.</p>
+                                <a href="#" class="btn btn-sm btn-faap-primary" onclick="showEventDetail(3); return false;">Plus d'infos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="#" class="btn btn-faap-primary" onclick="showPage('events-page'); return false;">Voir tous les événements</a>
+                </div>
+            </div>
+        </section>
+        <!-- End Events Section -->
+
+        <!-- Members Section -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Nos Membres</h2>
+                <div class="row">
+                    <div class="col-md-3 mb-4">
+                        <div class="card member-card text-center">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top member-img" alt="Member">
+                            <div class="card-body">
+                                <h5 class="card-title">Amina Sow</h5>
+                                <p class="card-text">Photographe portraitiste<br>Sénégal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="card member-card text-center">
+                            <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top member-img" alt="Member">
+                            <div class="card-body">
+                                <h5 class="card-title">Kwame Addo</h5>
+                                <p class="card-text">Photographe documentaire<br>Ghana</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="card member-card text-center">
+                            <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db1604?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top member-img" alt="Member">
+                            <div class="card-body">
+                                <h5 class="card-title">Fatou N'Diaye</h5>
+                                <p class="card-text">Photographe de mode<br>Côte d'Ivoire</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="card member-card text-center">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top member-img" alt="Member">
+                            <div class="card-body">
+                                <h5 class="card-title">Chinedu Okoro</h5>
+                                <p class="card-text">Photographe paysagiste<br>Nigeria</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="#" class="btn btn-faap-primary" onclick="showPage('members-page'); return false;">Rencontrer tous nos membres</a>
+                </div>
+            </div>
+        </section>
+        <!-- End Members Section -->
+
+        <!-- CTA Section -->
+        <section class="py-5 bg-faap-primary text-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="mb-3">Rejoignez la communauté des photographes africains</h2>
+                        <p class="lead mb-0">Devenez membre de la FAAP et bénéficiez de nos ressources, formations et opportunités d'exposition.</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a href="#" class="btn btn-faap-secondary btn-lg" onclick="showPage('membership-page'); return false;">Adhérer maintenant</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End CTA Section -->
+    </div>
+    <!-- End Home Page -->
+
+    <!-- Countries Page -->
+    <div id="countries-page" class="page-section">
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Pays Membres de la FAAP</h2>
+                <p class="text-center lead mb-5">La FAAP représente des photographes de tous les pays africains. Voici les pays actuellement membres de notre fédération.</p>
+                
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><img src="https://flagcdn.com/w40/sn.png" class="country-flag" alt="Sénégal"> Sénégal</h5>
+                                <p class="card-text">120 photographes membres<br>Contact: association@photosenegal.sn</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><img src="https://flagcdn.com/w40/ci.png" class="country-flag" alt="Côte d'Ivoire"> Côte d'Ivoire</h5>
+                                <p class="card-text">95 photographes membres<br>Contact: contact@photo-ci.org</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><img src="https://flagcdn.com/w40/ng.png" class="country-flag" alt="Nigeria"> Nigeria</h5>
+                                <p class="card-text">210 photographes membres<br>Contact: info@nigerianphotographers.org</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><img src="https://flagcdn.com/w40/gh.png" class="country-flag" alt="Ghana"> Ghana</h5>
+                                <p class="card-text">85 photographes membres<br>Contact: ghanaphotoassociation@ghmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><img src="https://flagcdn.com/w40/za.png" class="country-flag" alt="Afrique du Sud"> Afrique du Sud</h5>
+                                <p class="card-text">150 photographes membres<br>Contact: info@saphoto.org.za</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><img src="https://flagcdn.com/w40/ke.png" class="country-flag" alt="Kenya"> Kenya</h5>
+                                <p class="card-text">110 photographes membres<br>Contact: association@kenyaphoto.co.ke</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><img src="https://flagcdn.com/w40/ma.png" class="country-flag" alt="Maroc"> Maroc</h5>
+                                <p class="card-text">130 photographes membres<br>Contact: contact@photomaroc.ma</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><img src="https://flagcdn.com/w40/cm.png" class="country-flag" alt="Cameroun"> Cameroun</h5>
+                                <p class="card-text">75 photographes membres<br>Contact: camerounphoto@cm.org</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-5">
+                    <a href="#" class="btn btn-faap-primary" onclick="showPage('membership-page'); return false;">Devenir membre dans votre pays</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- End Countries Page -->
+
+    <!-- Membership Page -->
+    <div id="membership-page" class="page-section">
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Devenir Membre de la FAAP</h2>
+                <p class="text-center lead mb-5">Rejoignez notre communauté de photographes passionnés et bénéficiez de tous nos services et avantages.</p>
+                
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="membership-form">
+                            <h4 class="mb-4">Formulaire d'adhésion</h4>
+                            <form id="membershipForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="firstName" class="form-label">Prénom *</label>
+                                        <input type="text" class="form-control" id="firstName" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="lastName" class="form-label">Nom *</label>
+                                        <input type="text" class="form-control" id="lastName" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Téléphone</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="country" class="form-label">Pays *</label>
+                                    <select class="form-select" id="country" required>
+                                        <option value="" selected disabled>Sélectionnez votre pays</option>
+                                        <option value="senegal">Sénégal</option>
+                                        <option value="cote-ivoire">Côte d'Ivoire</option>
+                                        <option value="nigeria">Nigeria</option>
+                                        <option value="ghana">Ghana</option>
+                                        <option value="afrique-sud">Afrique du Sud</option>
+                                        <option value="kenya">Kenya</option>
+                                        <option value="maroc">Maroc</option>
+                                        <option value="cameroun">Cameroun</option>
+                                        <option value="other">Autre</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="city" class="form-label">Ville *</label>
+                                    <input type="text" class="form-control" id="city" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="specialty" class="form-label">Spécialité photographique *</label>
+                                    <select class="form-select" id="specialty" required>
+                                        <option value="" selected disabled>Sélectionnez votre spécialité</option>
+                                        <option value="portrait">Portrait</option>
+                                        <option value="paysage">Paysage</option>
+                                        <option value="mode">Mode</option>
+                                        <option value="documentaire">Documentaire</option>
+                                        <option value="journalisme">Photojournalisme</option>
+                                        <option value="nature">Nature</option>
+                                        <option value="art">Art et création</option>
+                                        <option value="autre">Autre</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="experience" class="form-label">Années d'expérience *</label>
+                                    <input type="number" class="form-control" id="experience" min="0" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="portfolio" class="form-label">Lien vers votre portfolio (site web, Instagram, etc.)</label>
+                                    <input type="url" class="form-control" id="portfolio">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Pourquoi souhaitez-vous rejoindre la FAAP ?</label>
+                                    <textarea class="form-control" id="message" rows="3"></textarea>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="terms" required>
+                                    <label class="form-check-label" for="terms">J'accepte les conditions d'adhésion et le traitement de mes données personnelles *</label>
+                                </div>
+                                <button type="submit" class="btn btn-faap-primary btn-lg">Soumettre ma candidature</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mt-5">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 border-0">
+                            <div class="card-body text-center">
+                                <div class="display-4 text-faap-primary mb-3"><i class="fas fa-users"></i></div>
+                                <h5>Réseautage</h5>
+                                <p>Rencontrez et collaborez avec des photographes de toute l'Afrique</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 border-0">
+                            <div class="card-body text-center">
+                                <div class="display-4 text-faap-primary mb-3"><i class="fas fa-camera-retro"></i></div>
+                                <h5>Expositions</h5>
+                                <p>Exposez vos travaux dans nos galeries et événements partenaires</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 border-0">
+                            <div class="card-body text-center">
+                                <div class="display-4 text-faap-primary mb-3"><i class="fas fa-graduation-cap"></i></div>
+                                <h5>Formations</h5>
+                                <p>Accédez à des ateliers et masterclasses avec des experts</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- End Membership Page -->
+
+    <!-- Members Page with Filter -->
+    <div id="members-page" class="page-section">
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Nos Membres</h2>
+                
+                <div class="row mb-4">
+                    <div class="col-md-12">
+                        <div class="member-filter text-center">
+                            <button class="btn btn-faap-primary me-2 active" data-filter="all">Tous</button>
+                            <button class="btn btn-outline-faap-primary me-2" data-filter="senegal">Sénégal</button>
+                            <button class="btn btn-outline-faap-primary me-2" data-filter="cote-ivoire">Côte d'Ivoire</button>
+                            <button class="btn btn-outline-faap-primary me-2" data-filter="nigeria">Nigeria</button>
+                            <button class="btn btn-outline-faap-primary me-2" data-filter="ghana">Ghana</button>
+                            <button class="btn btn-outline-faap-primary" data-filter="autre">Autres pays</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row members-container">
+                    <div class="col-md-3 mb-4 member-item" data-country="senegal">
+                        <div class="card member-card text-center">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top member-img" alt="Member">
+                            <div class="card-body">
+                                <h5 class="card-title">Amina Sow</h5>
+                                <p class="card-text">Photographe portraitiste<br>Sénégal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4 member-item" data-country="ghana">
+                        <div class="card member-card text-center">
+                            <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top member-img" alt="Member">
+                            <div class="card-body">
+                                <h5 class="card-title">Kwame Addo</h5>
+                                <p class="card-text">Photographe documentaire<br>Ghana</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4 member-item" data-country="cote-ivoire">
+                        <div class="card member-card text-center">
+                            <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db1604?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top member-img" alt="Member">
+                            <div class="card-body">
+                                <h5 class="card-title">Fatou N'Diaye</h5>
+                                <p class="card-text">Photographe de mode<br>Côte d'Ivoire</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4 member-item" data-country="nigeria">
+                        <div class="card member-card text-center">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top member-img" alt="Member">
+                            <div class="card-body">
+                                <h5 class="card-title">Chinedu Okoro</h5>
+                                <p class="card-text">Photographe paysagiste<br>Nigeria</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4 member-item" data-country="senegal">
+                        <div class="card member-card text-center">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top member-img" alt="Member">
+                            <div class="card-body">
+                                <h5 class="card-title">Moussa Diop</h5>
+                                <p class="card-text">Photographe de rue<br>Sénégal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4 member-item" data-country="autre">
+                        <div class="card member-card text-center">
+                            <img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top member-img" alt="Member">
+                            <div class="card-body">
+                                <h5 class="card-title">Lerato Moloto</h5>
+                                <p class="card-text">Photographe conceptuelle<br>Afrique du Sud</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4 member-item" data-country="autre">
+                        <div class="card member-card text-center">
+                            <img src="https://images.unsplash.com/photo-1485893086445-ed75865251e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top member-img" alt="Member">
+                            <div class="card-body">
+                                <h5 class="card-title">Jelani Abebe</h5>
+                                <p class="card-text">Photographe de nature<br>Kenya</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4 member-item" data-country="autre">
+                        <div class="card member-card text-center">
+                            <img src="https://images.unsplash.com/photo-1590086782792-42dd2350140d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top member-img" alt="Member">
+                            <div class="card-body">
+                                <h5 class="card-title">Rahma Hassan</h5>
+                                <p class="card-text">Photographe documentaire<br>Égypte</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <a href="#" class="btn btn-faap-primary" onclick="showPage('membership-page'); return false;">Rejoindre nos membres</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- End Members Page -->
+
+    <!-- Event Detail Page -->
+    <div id="event-detail-page" class="page-section">
+        <section class="py-5">
+            <div class="container">
+                <a href="#" class="btn btn-outline-faap-primary mb-4" onclick="showPage('events-page'); return false;"><i class="fas fa-arrow-left me-2"></i>Retour aux événements</a>
+                
+                <div class="row mb-4">
+                    <div class="col-md-8 mx-auto text-center">
+                        <h2 class="section-title" id="event-detail-title">Exposition "Regards Africains"</h2>
+                        <div class="event-date mb-3">
+                            <span class="event-day">15</span>
+                            <span class="event-month">Oct</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mb-5">
+                    <div class="col-md-12">
+                        <img src="" id="event-detail-image" class="event-detail-image" alt="Event Image">
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-8 mx-auto">
+                        <div id="event-detail-content">
+                            <p>Une exposition collective mettant en lumière le travail de 20 photographes africains contemporains.</p>
+                            <p>Cette exposition itinérante présente une diversité de regards sur l'Afrique contemporaine, à travers des thématiques variées allant de la vie urbaine aux traditions rurales, en passant par les questions environnementales et sociales.</p>
+                            <h4>Informations pratiques</h4>
+                            <ul>
+                                <li><strong>Date:</strong> 15 octobre - 15 novembre 2023</li>
+                                <li><strong>Lieu:</strong> Galerie FAAP, Dakar, Sénégal</li>
+                                <li><strong>Vernissage:</strong> 15 octobre à 18h</li>
+                                <li><strong>Entrée:</strong> Libre et gratuite</li>
+                            </ul>
+                            <h4>Artistes participants</h4>
+                            <p>Parmi les photographes exposés: Amina Sow (Sénégal), Kwame Addo (Ghana), Fatou N'Diaye (Côte d'Ivoire), Chinedu Okoro (Nigeria), et 16 autres artistes talentueux.</p>
+                        </div>
+                        
+                        <div class="text-center mt-5">
+                            <a href="#" class="btn btn-faap-primary me-2">S'inscrire à l'événement</a>
+                            <a href="#" class="btn btn-outline-faap-primary">Télécharger le programme</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- End Event Detail Page -->
+
+    <!-- Other Pages (simplified for this example) -->
+    <div id="about-page" class="page-section">
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title">À propos de la FAAP</h2>
+                <p>La Fédération Africaine sur l'Art Photographique (FAAP) est une organisation à but non lucratif fondée en 2010 avec pour mission de promouvoir et développer l'art photographique en Afrique. Nous rassemblons des photographes professionnels et amateurs de tous les pays africains.</p>
+                <p>Nos objectifs principaux sont :</p>
+                <ul>
+                    <li>Promouvoir l'excellence photographique africaine</li>
+                    <li>Organiser des expositions et événements</li>
+                    <li>Offrir des formations et ateliers</li>
+                    <li>Créer un réseau de photographes africains</li>
+                    <li>Défendre les intérêts des photographes</li>
+                </ul>
+                <a href="#" class="btn btn-faap-primary" onclick="showPage('home-page'); return false;">Retour à l'accueil</a>
+            </div>
+        </section>
+    </div>
+
+    <div id="gallery-page" class="page-section">
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title">Galerie complète</h2>
+                <div class="row">
+                    <div class="col-md-4 gallery-item">
+                        <a href="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" data-lightbox="gallery" data-title="Photo 1">
+                            <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Gallery Image" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-md-4 gallery-item">
+                        <a href="https://images.unsplash.com/photo-1507692242724-2013f5d8f091?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" data-lightbox="gallery" data-title="Photo 2">
+                            <img src="https://images.unsplash.com/photo-1507692242724-2013f5d8f091?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Gallery Image" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-md-4 gallery-item">
+                        <a href="https://images.unsplash.com/photo-1551632812-43ca1385a2a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" data-lightbox="gallery" data-title="Photo 3">
+                            <img src="https://images.unsplash.com/photo-1551632812-43ca1385a2a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Gallery Image" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-md-4 gallery-item">
+                        <a href="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" data-lightbox="gallery" data-title="Photo 4">
+                            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Gallery Image" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-md-4 gallery-item">
+                        <a href="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" data-lightbox="gallery" data-title="Photo 5">
+                            <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Gallery Image" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-md-4 gallery-item">
+                        <a href="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" data-lightbox="gallery" data-title="Photo 6">
+                            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Gallery Image" class="img-fluid">
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="#" class="btn btn-faap-primary" onclick="showPage('home-page'); return false;">Retour à l'accueil</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="events-page" class="page-section">
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title">Événements</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card event-card h-100">
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Event">
+                                <div class="event-date">
+                                    <span class="event-day">15</span>
+                                    <span class="event-month">Oct</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Exposition "Regards Africains"</h5>
+                                <p class="card-text">Une exposition collective mettant en lumière le travail de 20 photographes africains contemporains.</p>
+                                <a href="#" class="btn btn-sm btn-faap-primary" onclick="showEventDetail(1); return false;">Plus d'infos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card event-card h-100">
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Event">
+                                <div class="event-date">
+                                    <span class="event-day">22</span>
+                                    <span class="event-month">Oct</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Atelier de photographie de portrait</h5>
+                                <p class="card-text">Masterclass avec le célèbre photographe sénégalais Amadou Diallo sur les techniques de portrait.</p>
+                                <a href="#" class="btn btn-sm btn-faap-primary" onclick="showEventDetail(2); return false;">Plus d'infos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card event-card h-100">
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Event">
+                                <div class="event-date">
+                                    <span class="event-day">05</span>
+                                    <span class="event-month">Nov</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Conférence sur la photographie documentaire</h5>
+                                <p class="card-text">Échanges avec des photojournalistes renommés sur les défis de la photographie documentaire en Afrique.</p>
+                                <a href="#" class="btn btn-sm btn-faap-primary" onclick="showEventDetail(3); return false;">Plus d'infos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="#" class="btn btn-faap-primary" onclick="showPage('home-page'); return false;">Retour à l'accueil</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="contact-page" class="page-section">
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nom complet</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Sujet</label>
+                                <input type="text" class="form-control" id="subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-faap-primary">Envoyer</button>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Coordonnées</h5>
+                                <p class="card-text"><i class="fas fa-map-marker-alt me-2"></i> Dakar, Sénégal</p>
+                                <p class="card-text"><i class="fas fa-phone me-2"></i> +221 33 800 00 00</p>
+                                <p class="card-text"><i class="fas fa-envelope me-2"></i> contact@faap-afrique.org</p>
+                                <hr>
+                                <h5 class="card-title">Heures d'ouverture</h5>
+                                <p class="card-text">Lundi - Vendredi: 9h - 17h</p>
+                                <p class="card-text">Samedi: 10h - 14h</p>
+                                <p class="card-text">Dimanche: Fermé</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="#" class="btn btn-faap-primary" onclick="showPage('home-page'); return false;">Retour à l'accueil</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <img src="https://via.placeholder.com/200x60/ffffff/1a365d?text=FAAP" alt="FAAP Logo" class="img-fluid mb-3">
+                    <p>La Fédération Africaine sur l'Art Photographique œuvre pour la promotion et le développement de l'art photographique en Afrique.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="social-icon text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5 class="mb-3">Liens rapides</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white" onclick="showPage('home-page'); return false;">Accueil</a></li>
+                        <li class="mb-2"><a href="#" class="text-white" onclick="showPage('about-page'); return false;">À propos</a></li>
+                        <li class="mb-2"><a href="#" class="text-white" onclick="showPage('gallery-page'); return false;">Galerie</a></li>
+                        <li class="mb-2"><a href="#" class="text-white" onclick="showPage('events-page'); return false;">Événements</a></li>
+                        <li class="mb-2"><a href="#" class="text-white" onclick="showPage('members-page'); return false;">Membres</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h5 class="mb-3">Ressources</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white">Publications</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">Tutoriels</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">Appels à projets</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">Bourses</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h5 class="mb-3">Contact</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Dakar, Sénégal</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +221 33 800 00 00</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> contact@faap-afrique.org</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2023 Fédération Africaine sur l'Art Photographique. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3">Politique de confidentialité</a>
+                    <a href="#" class="text-white">Conditions d'utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    
+    <script>
+        // Initialisation des animations
+        new WOW().init();
+        
+        // Préloader
+        $(window).on('load', function() {
+            $('.preloader').fadeOut('slow');
+        });
+        
+        // Initialisation de Lightbox
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'showImageNumberLabel': false
+        });
+        
+        // Fonction pour afficher les pages
+        function showPage(pageId) {
+            // Masquer toutes les pages
+            $('.page-section').removeClass('active');
+            
+            // Afficher la page demandée
+            $('#' + pageId).addClass('active');
+            
+            // Remonter en haut de la page
+            window.scrollTo(0, 0);
+            
+            // Mettre à jour la navigation
+            $('.navbar-nav .nav-link').removeClass('active');
+            $(`.navbar-nav .nav-link[onclick*="${pageId}"]`).addClass('active');
+            
+            return false;
+        }
+        
+        // Gestion du formulaire d'adhésion
+        $('#membershipForm').on('submit', function(e) {
+            e.preventDefault();
+            alert('Merci pour votre demande d\'adhésion! Nous vous contacterons bientôt.');
+            showPage('home-page');
+        });
+        
+        // Filtrage des membres par pays
+        $('.member-filter button').on('click', function() {
+            var filter = $(this).data('filter');
+            
+            // Mettre à jour l'état actif des boutons
+            $('.member-filter button').removeClass('active').addClass('btn-outline-faap-primary');
+            $(this).addClass('active').removeClass('btn-outline-faap-primary');
+            
+            if (filter === 'all') {
+                $('.member-item').show();
+            } else {
+                $('.member-item').hide();
+                $(`.member-item[data-country="${filter}"]`).show();
+            }
+        });
+        
+        // Données des événements
+        var eventsData = {
+            1: {
+                title: 'Exposition "Regards Africains"',
+                image: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80',
+                content: `
+                    <p>Une exposition collective mettant en lumière le travail de 20 photographes africains contemporains.</p>
+                    <p>Cette exposition itinérante présente une diversité de regards sur l'Afrique contemporaine, à travers des thématiques variées allant de la vie urbaine aux traditions rurales, en passant par les questions environnementales et sociales.</p>
+                    <h4>Informations pratiques</h4>
+                    <ul>
+                        <li><strong>Date:</strong> 15 octobre - 15 novembre 2023</li>
+                        <li><strong>Lieu:</strong> Galerie FAAP, Dakar, Sénégal</li>
+                        <li><strong>Vernissage:</strong> 15 octobre à 18h</li>
+                        <li><strong>Entrée:</strong> Libre et gratuite</li>
+                    </ul>
+                    <h4>Artistes participants</h4>
+                    <p>Parmi les photographes exposés: Amina Sow (Sénégal), Kwame Addo (Ghana), Fatou N'Diaye (Côte d'Ivoire), Chinedu Okoro (Nigeria), et 16 autres artistes talentueux.</p>
+                `
+            },
+            2: {
+                title: 'Atelier de photographie de portrait',
+                image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80',
+                content: `
+                    <p>Masterclass avec le célèbre photographe sénégalais Amadou Diallo sur les techniques de portrait.</p>
+                    <p>Cet atelier intensif de deux jours vous permettra de maîtriser les techniques essentielles de la photographie de portrait, de la gestion de la lumière naturelle aux techniques de direction de modèle.</p>
+                    <h4>Informations pratiques</h4>
+                    <ul>
+                        <li><strong>Date:</strong> 22-23 octobre 2023</li>
+                        <li><strong>Lieu:</strong> Centre Culturel FAAP, Dakar, Sénégal</li>
+                        <li><strong>Horaires:</strong> 9h - 17h chaque jour</li>
+                        <li><strong>Tarif:</strong> 50 000 FCFA (membres FAAP: 40 000 FCFA)</li>
+                    </ul>
+                    <h4>Matériel requis</h4>
+                    <p>Appareil photo reflex ou hybride, objectif portrait (50mm ou 85mm recommandé), trépied (optionnel).</p>
+                    <p>Les débutants sont les bienvenus, mais une connaissance de base de son appareil photo est recommandée.</p>
+                `
+            },
+            3: {
+                title: 'Conférence sur la photographie documentaire',
+                image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80',
+                content: `
+                    <p>Échanges avec des photojournalistes renommés sur les défis de la photographie documentaire en Afrique.</p>
+                    <p>Cette conférence réunira des photojournalistes africains de renom pour discuter des défis spécifiques à la pratique documentaire sur le continent, ainsi que des opportunités uniques qu'offre l'Afrique aux photographes documentaires.</p>
+                    <h4>Informations pratiques</h4>
+                    <ul>
+                        <li><strong>Date:</strong> 5 novembre 2023</li>
+                        <li><strong>Lieu:</strong> Auditorium FAAP, Dakar, Sénégal</li>
+                        <li><strong>Horaire:</strong> 14h - 17h</li>
+                        <li><strong>Entrée:</strong> Libre et gratuite sur inscription</li>
+                    </ul>
+                    <h4>Intervenants</h4>
+                    <p>Parmi les intervenants: Malik Sidibé (Mali), Nana Kofi Acquah (Ghana), Sarah Waiswa (Ouganda/Kenya), et Omar Victor Diop (Sénégal).</p>
+                    <h4>Thématiques abordées</h4>
+                    <ul>
+                        <li>L'éthique du photojournalisme en contexte africain</li>
+                        <li>Financer des projets documentaires à long terme</li>
+                        <li>Naviguer entre traditions et modernité</li>
+                        <li>Exporter le regard africain sur la scène internationale</li>
+                    </ul>
+                `
+            }
+        };
+        
+        // Fonction pour afficher les détails d'un événement
+        function showEventDetail(eventId) {
+            var event = eventsData[eventId];
+            if (event) {
+                $('#event-detail-title').text(event.title);
+                $('#event-detail-image').attr('src', event.image);
+                $('#event-detail-content').html(event.content);
+                showPage('event-detail-page');
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>
